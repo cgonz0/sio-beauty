@@ -1,0 +1,387 @@
+@import './_variables.scss';
+
+html {
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1px;
+}
+
+header, h1, h2, h6, p span, a, footer, .btn, .user-name, .quotation, .number {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+}
+
+h1, h2, h6 {
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 21px;
+  letter-spacing: .5px;
+  margin-top: 20px;
+  span {
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    display: inline-block;
+  }
+  a {
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: none;
+    color: $red;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  padding: 40px;
+}
+
+.section {
+  padding: 60px 40px;
+}
+
+.btn {
+  background-color: $red;
+  color: white;
+  border-radius: 0px;
+  padding: 15px 40px;
+  margin-top: 50px;
+  text-transform: uppercase;
+  font-size: 18px;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
+
+.content {
+  padding-top: 167px;
+}
+
+
+//Header
+.header-wrap {
+  box-shadow: 1px 1px 10px 0 rgba(0,0,0,0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  .header {
+    background-color: $pink;
+    font-weight: 300;
+    font-size: 15px;
+    .container-sm {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 50px;
+      li.login {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.sale-text {
+  position: relative;
+  left: 35px;
+}
+
+.cart {
+  padding: 12px 20px;
+  background-color: $red;
+  &:hover {
+    background-color: black;
+  }
+  i.fa.fa-shopping-bag {
+    margin-right: 10px;
+  }
+  a {
+    color: white;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+//Nav
+.nav {
+  padding: 20px 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: white;
+  img {
+    width: auto;
+    height: 80px;
+  }
+  li {
+    margin: 0 20px;
+  }
+}
+
+.nav-links {
+  margin-left: auto;
+  left: -10px;
+  position: relative;
+  a.dropbtn {
+    margin-right: 25px;
+  }
+}
+
+.search {
+  margin-left: auto;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+//Dropdown
+.dropdown .dropdown-content {
+  position: absolute;
+  width: 200px;
+  padding: 10px 20px;
+  background: white;
+  box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.5s ease-in-out;
+  ul li {
+    display: block;
+    margin: 20px 0px;
+  }
+  &:hover {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.fa-chevron-down {
+  position: absolute;
+  left: 50px;
+  top: -18px;
+}
+
+//Hero
+.hero {
+  z-index: -1;
+  background: url(../images/hero.png);
+  height: 480px;
+  background-size: 90%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  padding-top: 20px;
+  h1 {
+    max-width: 480px;
+    font-style: italic;
+    font-size: 50px;
+  }
+  p {
+    max-width: 480px;
+  }
+}
+
+//Info section 1
+.info-1 {
+  background-color: $blue;
+  color: white;
+  text-align: center;
+  .container {
+    p {
+      max-width: 820px;
+      margin: 30px auto;
+      span {
+        display: block;
+        margin-top: -20px;
+      }
+    }
+    .btn.alt {
+      background-color: white;
+      color: $blue;
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+}
+
+//Info section 2
+.info-2 {
+  background: url(../images/info-2.png);
+  height: 450px;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  p {
+    max-width: 700px;
+  }
+}
+
+//Reviews
+.reviews {
+  background-color: $pink;
+  .quote-wrapper {
+    display: flex;
+    justify-content: center;
+    .user-img {
+      margin-top: 20px;
+    }
+    .user-name {
+      margin-top: 10px;
+      color: $gray;
+      span {
+        text-transform: uppercase;
+      }
+    }
+    .main-quote {
+      max-width: 50%;
+      text-align: center;
+      padding: 20px;
+      margin-right: 20px;
+      align-self: center;
+      position: relative;
+      .quotation {
+        font-size: 100px;
+        font-weight: 400;
+        position: absolute;
+        color: $red;
+        opacity: .3;
+        position: absolute;
+        top: -10px;
+        left: -10px;
+      }
+      h4 {
+        line-height: 1.5;
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+    .ancillary-quotes {
+      text-align: center;
+      margin: 20px;
+      .quote {
+        background-color: white;
+        box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.1);
+        min-height: 100px;
+        padding: 25px;
+        margin: 25px;
+      }
+    }
+  }
+}
+
+//How to Use
+.how-to-use {
+  text-align: center;
+  .steps-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    .step {
+      width: 280px;
+      padding: 30px 30px 0px;
+      .number {
+        border-radius: 90%;
+        margin: 0 auto;
+        background: #FFECEF;
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+        span {
+          font-size: 21px;
+          font-weight: 400;
+          position: relative;
+          top: 8px;
+        }
+      }
+      img {
+        width: 150px;
+      }
+    }
+    h6 {
+      font-weight: 400;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+//Footer
+.footer {
+  box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.1);
+  line-height: 2;
+  font-size: 13px;
+  text-align: center;
+  .details {
+    display: flex;
+    justify-content: center;
+    span {
+      margin-right: 50px;
+    }
+    span.divider {
+      margin: 0 10px;
+    }
+  }
+  .disclaimer a {
+    text-decoration: underline;
+  }
+}
+
+
+@media screen and (max-width: 1160px) {
+.header-wrap {
+    font-size: .8em;
+  }
+  .fa-chevron-down {
+    left: 44px;
+    top: -15px;
+  }
+}
+
+//Quick mobile fix
+@media screen and (max-width: 768px) {
+  .nav-links li {
+    display: none;
+  }
+  .mobile-logo {
+  display: block;
+  }
+  .sale-text {
+    display: none;
+  }
+  .reviews {
+    .quote-wrapper {
+      flex-wrap: wrap;
+      .main-quote {
+        max-width: 100%;
+      }
+    }
+  }
+}
